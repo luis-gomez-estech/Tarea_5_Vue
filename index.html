@@ -31,7 +31,7 @@
 
           <div class="grupo">
 
-            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}" v-model= "cambiarColor" maxlength="7" placeholder="#000000">
+            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}" v-model= "cambiarColor" maxlength="7" >
             <input type="color"v-model="cambiarColor"> 
             <img class="imagenes" v-bind:style="{background: cambiarColor}" src="./imagenes/casa1.png">
 
@@ -47,7 +47,7 @@
 
           <div class="grupo">
 
-            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}"  v-model= "cambiarColor" m maxlength="7" placeholder="#000000">
+            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}"  v-model= "cambiarColor" m maxlength="7">
             <input type="color"v-model="cambiarColor"> 
             <img class="imagenes" v-bind:style="{background: cambiarColor}" src="./imagenes/camiseta.png">
 
@@ -63,9 +63,10 @@
 
           <div class="grupo">
 
-            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}" v-model= "cambiarColor" maxlength="7" placeholder="#000000">
-            <input type="color"v-model="color"> 
-            <img class="imagenes" v-bind:style="{background: color}" src="./imagenes/coche2.png">
+            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}" v-model= "cambiarColor" maxlength="7">
+            <input type="color"v-model="cambiarColor"> 
+           <img class="imagenes" v-bind:style="{background: cambiarColor}" src="./imagenes/coche2.png">
+
 
           </div>    
 
@@ -136,7 +137,7 @@ new Vue ({
 
 new Vue ({
   el: '#app3',
-  data:{cambiarColor:"#1255b5"},
+  data:{cambiarColor:"#f1f1f1"},
 
 });
 
