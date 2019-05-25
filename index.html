@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarea 5 - VUE</title>
+
+  <link rel="icon" type="image/png" href="imagenes/logo.ico" /> 
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css"> 
+
+</head>
+
+<body :style = "style">  
+
+  <br>
+
+  <h1>ELIGE UN COLOR PARA LOS PRODUCTOS</h1>
+
+  <div class="container">
+
+
+    <div class="row">
+
+      <div class="col-sm-4 celdas">
+
+        <div id="app">
+
+          <div class="grupo">
+
+            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}" v-model= "cambiarColor" maxlength="7" placeholder="#000000">
+            <input type="color"v-model="cambiarColor"> 
+            <img class="imagenes" v-bind:style="{background: cambiarColor}" src="./imagenes/casa1.png">
+
+          </div>    
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 celdas">
+
+        <div id="app2">
+
+          <div class="grupo">
+
+            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}"  v-model= "cambiarColor" m maxlength="7" placeholder="#000000">
+            <input type="color"v-model="cambiarColor"> 
+            <img class="imagenes" v-bind:style="{background: cambiarColor}" src="./imagenes/camiseta.png">
+
+          </div>    
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-4 celdas">
+
+        <div id="app3">
+
+          <div class="grupo">
+
+            <input type="text" v-bind:style= "{cambiarColor:cambiarColor}" v-model= "cambiarColor" maxlength="7" placeholder="#000000">
+            <input type="color"v-model="color"> 
+            <img class="imagenes" v-bind:style="{background: color}" src="./imagenes/coche2.png">
+
+          </div>    
+
+        </div>
+
+      </div>
+
+     
+      <div id="app4" class="celdas2" >
+
+        <div class="centrado">
+
+          <p>Color fondo</p>
+          <input type="color"v-model="colorFondo"> 
+          <br><br>
+          <p>Color del texto</p>
+          <input type="color"v-model="colorTexto"> 
+
+        <p class="resultados" v-bind:style="{background: colorFondo,color: colorTexto}"  >Resultado</p>
+
+        </div>    
+
+      </div>
+
+      <div id="body" class="celdas2" >
+
+        <div class="centrado">
+
+          <p>Color de fondo body</p>
+
+          <input type="color" v-model="style.backgroundColor">
+          <br>
+           <input type="text" v-bind:style= "{color:color}" v-model= "style.backgroundColor" maxlength="7" placeholder="#000000">
+          <br><br>          
+
+        </div>      
+
+
+    </div>
+
+
+  </div>
+
+
+  <!-- SCRIPT -->
+
+  <!-- Libreria vue -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"> </script>
+
+  <!-- Libreria para validar con Vue -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-validator/2.1.5/vue-validator.min.js"></script>
+
+  <script>
+
+//Para importar audios
+
+new Vue ({
+  el: '#app',
+  data:{cambiarColor:"#4a5b5"},
+
+});
+
+new Vue ({
+  el: '#app2',
+  data:{cambiarColor:"#ff3539"},
+
+});
+
+new Vue ({
+  el: '#app3',
+  data:{cambiarColor:"#1255b5"},
+
+});
+
+// Aqui manejo 2 atributos, color de fondo y de texto
+
+new Vue ({
+  el: '#app4',
+  data:{colorFondo:"#6255b5",colorTexto:"#000"},
+
+});
+
+new Vue ({
+  el: 'body',
+  data:{color:"#000"},
+
+});
+
+
+</script>
+
+
+</body>
+</html>
+
