@@ -1,7 +1,7 @@
 
 body {
 
-  background: #000;
+  background: #cdcdcd;
   background-size: cover;
   font-family: sans-serif;
   /*
@@ -61,7 +61,7 @@ p {
 }
 
 h1{
-  color:#ffedb9;
+  color:#6255b5;
   font-size: 20px;
   text-align:center;
   margin:0;
